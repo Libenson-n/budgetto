@@ -31,7 +31,7 @@ model Transaction {
   // relation to User
   userId    String
   user      User     @relation(fields: [userId], references: [clerkUserId], onDelete: Cascade)
-  createdAT DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@index([userId])
 }

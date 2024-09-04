@@ -5,7 +5,7 @@ import { auth } from "@clerk/nextjs/server";
 import { Transaction } from "@/types/Transaction";
 
 export const getUserTransaction = async (): Promise<{
-  transactions: Transaction[];
+  transactions?: Transaction[];
   error?: string;
 }> => {
   const { userId } = auth();

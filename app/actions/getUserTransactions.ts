@@ -18,7 +18,7 @@ export const getUserTransaction = async (): Promise<{
     const transactions = await db.transaction.findMany({
       where: { userId },
       orderBy: {
-        createdAT: "desc",
+        createdAt: "desc",
       },
     });
 

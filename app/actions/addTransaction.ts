@@ -21,7 +21,7 @@ const addTransaction = async (
   const amountValue = formData.get("amount");
 
   if (!textValue || textValue === "" || !amountValue) {
-    return { error: "Text or amount is missing!" };
+    return { "error: Text or amount is missing!" };
   }
 
   const text: string = textValue.toString();
@@ -32,7 +32,7 @@ const addTransaction = async (
   const { userId } = auth();
 
   if (!userId) {
-    return { error: "User not found" };
+    return { "error: User not found" };
   }
 
   try {

@@ -11,7 +11,7 @@ export const getUserTransaction = async (): Promise<{
   const { userId } = auth();
 
   if (!userId) {
-    return { "error: User not found" };
+    return { error: "User not found" };
   }
 
   try {

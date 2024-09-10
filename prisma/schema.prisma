@@ -25,6 +25,7 @@ model Transaction {
   userId    String
   createdAT DateTime @default(now())
   user      User     @relation(fields: [userId], references: [clerkUserId], onDelete: Cascade)
+  createdAt DateTime @default(now())
 
   @@index([userId])
 }
